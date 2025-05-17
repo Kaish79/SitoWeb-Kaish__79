@@ -520,6 +520,27 @@ h2{
     letter-spacing: 1px;
 }
 
+/* Badge per pulsante Collaborazioni */
+.badge-collab {
+    position: absolute;
+    top: -8px;
+    right: -32px;
+    background: var(--accent-neon);
+    color: var(--amaranto-dark);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #00fff766;
+    letter-spacing: 1px;
+    animation: badge-pop 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes badge-pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
 /* ======= RESPONSIVE ======= */
 @media (max-width: 900px) {
     .altBuilds {
@@ -616,4 +637,91 @@ h2{
 .crediti a {
     color: var(--amaranto) !important;
     text-decoration: underline;
+}
+
+/* Card collaborazioni streamer */
+.collab-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 20px; /* aumenta la distanza dall'intestazione */
+}
+
+.collab-card {
+    background: linear-gradient(135deg, var(--amaranto-dark) 0%, #23272b 100%);
+    border: 2px solid var(--accent-neon);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #000a, 0 2px 16px var(--amaranto-light);
+    width: 320px;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.collab-card:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px var(--accent-neon), 0 2px 16px var(--amaranto);
+    border-color: var(--amaranto);
+}
+
+.collab-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-neon);
+    margin-bottom: 16px;
+    object-fit: cover;
+    background: #23272b;
+}
+
+.collab-info h2 {
+    color: var(--accent-neon);
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.collab-info p {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.collab-link {
+    color: var(--amaranto);
+    background: var(--accent-neon);
+    padding: 7px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px #00fff766;
+}
+.collab-link:hover {
+    background: var(--amaranto);
+    color: #fff;
+}
+
+.collab-social {
+    margin-top: 10px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+.collab-social a {
+    color: var(--accent-neon);
+    font-size: 1.35rem;
+    transition: color 0.2s, transform 0.15s;
+}
+.collab-social a:hover {
+    color: var(--amaranto);
+    transform: scale(1.18) rotate(-6deg);
+}
+
+.aspiranti-title {
+    text-align: center;
 }
