@@ -1,5 +1,5 @@
 /* Import Orbitron font */
-@import url('https://fonts.googleapis.com/css?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap');
 
 html{
     height: 100%;
@@ -28,11 +28,11 @@ input{
 }
 
 .bg-black{
-    background-color: rgb(36, 36, 36); !important;
+    background-color: rgb(36, 36, 36) !important;
 }
 
 .gap-05{
-    gap: 0.125rem; !important;
+    gap: 0.125rem !important;
 }
 
 .w-20{
@@ -349,10 +349,16 @@ h2{
     margin-top: 600px;
 }
 
-.crediti{
+.crediti {
     text-align: center;
     color: white;
-    font-size: 12px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+.crediti a {
+    color: #ff0066 !important;
+    text-decoration: underline;
 }
 
 #dropdownContainer {
@@ -408,7 +414,7 @@ h2{
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Riduci la larghezza del modal */
-    max-width: 400px; /* Imposta una larghezza massima piÃ¹ piccola */
+    max-width: 400px; /* Imposta una larghezza massima più piccola */
     background-color: black;
     color: white;
     text-align: center;
