@@ -1,6 +1,17 @@
 /* Import Orbitron font */
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap');
 
+:root {
+    --amaranto: #9B1B30;
+    --amaranto-light: #c23a4b;
+    --amaranto-dark: #6e1221;
+    --accent-neon: #00FFF7;
+    --bg-dark: #181a1b;
+    --bg-gradient: radial-gradient(ellipse at top left, #23272b 0%, #181a1b 100%);
+    --text-main: #f3e9ee;
+    --text-muted: #e0e0e0;
+}
+
 html{
     height: 100%;
     margin: 0;
@@ -15,8 +26,8 @@ html{
 }
 
 body {
-    background: radial-gradient(ellipse at top left, #23272b 0%, #181a1b 100%);
-    color: #e0e0e0;
+    background: var(--bg-gradient);
+    color: var(--text-main);
     font-family: 'Orbitron', Arial, sans-serif;
     min-height: 100vh;
     letter-spacing: 1px;
@@ -45,15 +56,18 @@ input{
 
 /* Modern search bar look */
 #search-bar {
-    background: rgba(36,36,36,0.96);
-    border: none;
-    border-radius: 18px;
+    background: rgba(155,27,48,0.13);
+    border: 2px solid var(--amaranto);
     color: #fff;
     padding: 12px 44px 12px 20px;
     font-size: 1.08rem;
     margin-right: 0;
-    width: 260px;
-    box-shadow: 0 2px 16px #ff006633, 0 2px 8px #000a;
+    width: 100%;
+    min-width: 220px;
+    max-width: 340px;
+    box-sizing: border-box;
+    padding-right: 38px; /* spazio per la X */
+    box-shadow: 0 2px 16px var(--amaranto-light), 0 2px 8px #000a;
     transition: box-shadow 0.2s, background 0.2s;
     outline: none;
     font-family: 'Orbitron', Arial, sans-serif;
@@ -62,8 +76,8 @@ input{
 }
 
 #search-bar:focus {
-    background: #23272b;
-    box-shadow: 0 0 0 2px #ff0066, 0 2px 16px #ff006633;
+    background: var(--bg-dark);
+    box-shadow: 0 0 0 2px var(--amaranto), 0 2px 16px var(--amaranto-light);
 }
 
 .search-container {
@@ -72,21 +86,31 @@ input{
     align-items: center;
     justify-content: center;
     margin-bottom: 18px;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .clear-button {
     position: absolute;
-    right: 18px;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     color: #ff0066;
     font-size: 1.5rem;
     cursor: pointer;
     transition: color 0.2s, transform 0.15s;
-    top: 50%;
-    transform: translateY(-50%);
     padding: 0;
-    z-index: 2;
+    z-index: 1; /* oppure rimuovi questa riga */
+    line-height: 1;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .clear-button:hover {
@@ -119,16 +143,16 @@ h1{
 }
 
 .navbar {
-    background: rgba(24,26,27,0.92);
+    background: rgba(155, 27, 48, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 18px;
     margin: 24px auto 32px auto;
-    box-shadow: 0 2px 24px #ff006633, 0 2px 16px #000a;
+    box-shadow: 0 2px 24px var(--amaranto-light), 0 2px 16px #000a;
     padding: 12px 32px;
+    border: 2px solid var(--amaranto);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1.5px solid #222;
 }
 
 .logo-section {
@@ -137,23 +161,23 @@ h1{
 }
 
 .logo-icon {
+    border: 2px solid var(--amaranto);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 2.7rem;
     width: 2.7rem;
     border-radius: 50%;
     margin-right: 8px;
-    box-shadow: 0 2px 12px #ff006633, 0 2px 12px #0006;
-    border: 2px solid #ff0066;
-    background: #181a1b;
+    box-shadow: 0 2px 12px var(--amaranto-light), 0 2px 12px #0006;
+    background: var(--bg-dark);
 }
 
 .logo-text {
-    color: #ff0066;
+    color: var(--amaranto);
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
-    text-shadow: 0 2px 12px #181a1b;
+    text-shadow: 0 2px 12px var(--bg-dark);
 }
 
 .redirect_to_self{
@@ -172,16 +196,16 @@ h1{
     width: 2.1rem;
     margin: 0 4px;
     border-radius: 50%;
-    background: #23272b;
+    background: var(--bg-dark);
     box-shadow: 0 2px 8px #0006;
     transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
-    border: 2px solid transparent;
+    border: 2px solid var(--amaranto-dark);
 }
 
 .social-icon:hover {
-    box-shadow: 0 0 16px #ff0066, 0 2px 8px #0006;
+    box-shadow: 0 0 16px var(--amaranto), 0 2px 8px #0006;
+    border: 2px solid var(--amaranto);
     transform: scale(1.13) rotate(-3deg);
-    border: 2px solid #ff0066;
 }
 
 
@@ -247,13 +271,17 @@ h2{
 .altBuilds.active,
 #showAllButton.active,
 #showAllButtonSurv.active {
-    border: 2px solid #ffffff;
+    border: 2px solid var(--amaranto);
+    color: #fff;
+    background: var(--amaranto-dark);
 }
 
 .altBuilds:hover,
 #showAllButton:hover,
 #showAllButtonSurv:hover {
-    border: 2px solid #ffffff;
+    border: 2px solid var(--amaranto-light);
+    color: #fff;
+    background: var(--amaranto);
 }
 
 .altBuilds:not(.active):focus,
@@ -357,7 +385,7 @@ h2{
     font-family: 'Orbitron', Arial, sans-serif;
 }
 .crediti a {
-    color: #ff0066 !important;
+    color: var(--amaranto) !important;
     text-decoration: underline;
 }
 
@@ -461,7 +489,7 @@ h2{
 
 .killer-addons .addon {
     border-radius: 8px;
-    border: 1.5px solid #222;
+    border: 1.5px solid var(--amaranto-dark);
     background: linear-gradient(145deg, #222 60%, #333 100%);
     transition: transform 0.15s, border 0.2s, box-shadow 0.2s;
     box-shadow: 0 1px 6px #0006;
@@ -469,14 +497,14 @@ h2{
     height: 40px;
     object-fit: contain;
     margin-bottom: 2px;
-    filter: drop-shadow(0 0 8px #ff006633);
+    filter: drop-shadow(0 0 8px var(--amaranto-light));
 }
 
 .killer-addons .addon:hover {
     transform: scale(1.12) rotate(-2deg);
-    border: 1.5px solid #ff0066;
+    border: 1.5px solid var(--amaranto);
     z-index: 2;
-    box-shadow: 0 0 12px #fff, 0 0 16px #ff0066;
+    box-shadow: 0 0 12px #fff, 0 0 16px var(--amaranto);
 }
 
 .addon-label {
@@ -552,14 +580,14 @@ h2{
 .modal-content.bg-dark {
     background: #181a1b;
     border-radius: 18px;
-    border: 2px solid #ff0066;
+    border: 2px solid var(--amaranto);
     font-family: 'Orbitron', Arial, sans-serif;
 }
 .modal-header {
     border-bottom: 1px solid #23272b;
 }
 .modal-title {
-    color: #ff0066;
+    color: var(--amaranto);
     font-weight: bold;
     font-family: 'Orbitron', Arial, sans-serif;
     letter-spacing: 1.5px;
@@ -571,7 +599,7 @@ h2{
     transition: color 0.2s;
 }
 .close:hover {
-    color: #ff0066;
+    color: var(--amaranto);
 }
 
 /* ======= FOOTER ======= */
@@ -586,6 +614,6 @@ h2{
     font-family: 'Orbitron', Arial, sans-serif;
 }
 .crediti a {
-    color: #ff0066 !important;
+    color: var(--amaranto) !important;
     text-decoration: underline;
 }
