@@ -778,6 +778,8 @@ h1, #titolo {
     .killer-addons {
         flex-direction: column !important;
         gap: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
 
@@ -823,6 +825,12 @@ h1, #titolo {
     .search-container {
         max-width: 98vw !important;
         padding: 0 2vw;
+    }
+    .killer-addons {
+        flex-direction: column !important;
+        gap: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
 
