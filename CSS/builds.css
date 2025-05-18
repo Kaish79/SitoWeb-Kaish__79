@@ -917,3 +917,11 @@ h1, #titolo {
         height: 24px !important;
     }
 }
+
+.surv-desc {
+    color: #ffd700;
+    font-size: 1.01em;
+    margin-bottom: 8px;
+    text-align: center;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
