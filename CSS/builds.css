@@ -782,7 +782,7 @@ h1, #titolo {
     border: 2px solid var(--accent-gold, #ffd700);
     margin-bottom: 18px;
     background: #181218;
-    box-shadow: 0 2px 12px var(--bordaux-light, #c72c5a);
+    box-shadow: 0 2px 12px var(--bordaux-light, #ffffff);
 }
 
 .obs-pacchetto-info h2 {
