@@ -4,7 +4,7 @@
 :root {
     --notte: #101935;
     --blu: #3b3b3b;
-    --azzurro: #ff0000;
+    --azzurro: #ffffff;
     --lime: #f8f8f8;
     --argento: #e0e0e0;
     --bianco-caldo: #f8f8f2;
@@ -29,7 +29,7 @@ html{
 }
 
 body {
-    background: linear-gradient(135deg, #3b0909 0%, #0c0c0c 100%);
+    background: linear-gradient(135deg, #292929 0%, #292929 100%);
     min-height: 100vh;
     color: var(--text-main);
     font-family: 'Orbitron', Arial, sans-serif;
