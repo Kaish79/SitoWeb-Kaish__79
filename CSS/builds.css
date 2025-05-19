@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap');
 
 :root {
-    --notte: #101935;
-    --blu: #3b3b3b;
+    --notte: #303030;
+    --blu: #4e4949;
     --azzurro: #ffffff;
     --lime: #f8f8f8;
     --argento: #e0e0e0;
     --bianco-caldo: #f8f8f2;
     --accento: #baff39;
     --accento-hover: #ffffff;
-    --bg-box: #18223a;
+    --bg-box: #18223a00;
     --text-main: #f8f8f2;
     --text-muted: #b0b8c1;
 }
@@ -143,7 +143,7 @@ h1{
 }
 
 .navbar {
-    background: rgba(30, 42, 58, 0.85);
+    background: rgba(58, 30, 58, 0.85);
     border-radius: 22px;
     border: 2px solid var(--azzurro);
     box-shadow: 0 2px 24px var(--azzurro), 0 2px 16px #000a;
@@ -686,6 +686,32 @@ h1, #titolo {
     color: var(--notte);
 }
 
+/* Aggiorna lo stile del bottone "Vai al canale" nelle Collaborazioni */
+.collab-link {
+    background: linear-gradient(90deg, #d7263d 0%, #c72c5a 100%);
+    color: #fff !important;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 9px 26px;
+    text-decoration: none;
+    border: 2px solid #ffd700;
+    box-shadow: 0 2px 12px #d7263d55, 0 0 0 2px #ffd700;
+    text-shadow: 0 1px 8px #fff, 0 1px 4px #d7263d;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+    display: inline-block;
+    margin-top: auto;
+    align-self: center;
+}
+
+.collab-link:hover {
+    background: #ffd700;
+    color: #d7263d !important;
+    box-shadow: 0 0 18px #ffd700, 0 2px 8px #d7263d88;
+    border-color: #d7263d;
+}
+
 .collab-social a {
     color: var(--azzurro);
     font-size: 1.35rem;
@@ -925,7 +951,7 @@ h1, #titolo {
 .collab-card, .obs-pacchetto-card, .obs-servizi-box, .obs-footer {
     background: rgba(35, 20, 28, 0.82);
     border: 2.5px solid #ffffff;
-    border-radius: 22px;
+    border-radius: 15px;
     box-shadow: 0 8px 32px 0 #ffffff, 0 2px 16px #f7f7f7;
     backdrop-filter: blur(8px);
     color: #f8f8f2;
