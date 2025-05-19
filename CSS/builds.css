@@ -924,9 +924,9 @@ h1, #titolo {
 
 .collab-card, .obs-pacchetto-card, .obs-servizi-box, .obs-footer {
     background: rgba(35, 20, 28, 0.82);
-    border: 2.5px solid #d7263d;
+    border: 2.5px solid #ffffff;
     border-radius: 22px;
-    box-shadow: 0 8px 32px 0 #c72c5a, 0 2px 16px #f7f7f7;
+    box-shadow: 0 8px 32px 0 #ffffff, 0 2px 16px #f7f7f7;
     backdrop-filter: blur(8px);
     color: #f8f8f2;
 }
@@ -961,8 +961,8 @@ h1, #titolo {
     font-size: 0.85em;
     margin-right: 10px;
     letter-spacing: 1px;
-    box-shadow: 0 2px 8px #ffd70088;
-    border: 1.5px solid #ffd700;
+    box-shadow: 0 2px 8px #ffffff88;
+    border: 1.5px solid #000000;
     text-shadow: 0 1px 4px #fff;
     vertical-align: middle;
 }
