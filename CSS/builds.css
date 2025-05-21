@@ -694,15 +694,15 @@ h1, #titolo {
 
 /* Aggiorna lo stile del bottone "Vai al canale" nelle Collaborazioni */
 .collab-link {
-    background: linear-gradient(90deg, #d7263d 0%, #c72c5a 100%);
+    background: linear-gradient(90deg, #3c2332 0%, #ba8fd6 100%);
     color: #fff !important;
     font-weight: bold;
     border-radius: 12px;
     padding: 9px 26px;
     text-decoration: none;
-    border: 2px solid #ffd700;
-    box-shadow: 0 2px 12px #d7263d55, 0 0 0 2px #ffd700;
-    text-shadow: 0 1px 8px #fff, 0 1px 4px #d7263d;
+    border: 2px solid #ba8fd6;
+    box-shadow: 0 2px 12px #3c2332, 0 0 0 2px #ba8fd6;
+    text-shadow: 0 1px 8px #fff, 0 1px 4px #3c2332;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
@@ -712,10 +712,10 @@ h1, #titolo {
 }
 
 .collab-link:hover {
-    background: #ffd700;
-    color: #d7263d !important;
-    box-shadow: 0 0 18px #ffd700, 0 2px 8px #d7263d88;
-    border-color: #d7263d;
+    background: #ba8fd6;
+    color: #3c2332 !important;
+    box-shadow: 0 0 18px #ba8fd6, 0 2px 8px #3c233288;
+    border-color: #3c2332;
 }
 
 .collab-social a {
@@ -1017,4 +1017,97 @@ h1, #titolo {
     .collab-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Nuovo stile per i bottoni delle build killer */
+.altBuilds {
+    background: linear-gradient(90deg, #3c2332 0%, #ba8fd6 100%);
+    color: #fff !important;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 8px 22px;
+    margin: 0 6px 8px 0;
+    border: 2px solid #ba8fd6; /* viola chiaro */
+    box-shadow: 0 2px 12px #3c2332, 0 0 0 2px #ba8fd6;
+    text-shadow: 0 1px 8px #fff, 0 1px 4px #3c2332;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+    display: inline-block;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1em;
+}
+
+.altBuilds.active,
+.altBuilds:focus,
+.altBuilds:hover {
+    background: #ba8fd6;
+    color: #3c2332 !important;
+    border-color: #3c2332;
+    box-shadow: 0 0 18px #ba8fd6, 0 2px 8px #3c233288;
+    outline: none;
+}
+
+/* Modern style per il box descrizione perk */
+.modal-content.bg-dark {
+    background: linear-gradient(135deg, #231522 0%, #3c2332 100%);
+    border-radius: 22px;
+    border: 2.5px solid #ba8fd6;
+    box-shadow: 0 8px 40px #000a, 0 0 0 4px #ba8fd644;
+    padding: 0 0 18px 0;
+}
+
+.modal-header {
+    border-bottom: 2px solid #ba8fd6;
+    background: transparent;
+    border-radius: 22px 22px 0 0;
+    padding: 18px 28px 10px 28px;
+}
+
+.modal-title {
+    color: #fff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.45em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px #3c2332, 0 1px 4px #ba8fd6;
+}
+
+.modal-header .close {
+    color: #fff;
+    font-size: 2.1em;
+    opacity: 0.85;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+.modal-header .close:hover {
+    color: #ba8fd6;
+    opacity: 1;
+}
+
+.modal-body.bg-dark {
+    background: transparent;
+    color: #e0e0e0;
+    font-size: 1.08em;
+    font-family: 'Inter', Arial, sans-serif;
+    padding: 18px 28px 18px 28px;
+    text-align: center;
+}
+
+#modalImg {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #ba8fd6aa, 0 0 0 3px #3c2332;
+    background: #1a1018;
+}
+
+#modalDescription {
+    color: #e0e0e0;
+    margin-top: 10px;
+    font-size: 1.08em;
+    line-height: 1.5;
+    text-align: center;
 }
